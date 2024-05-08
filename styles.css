@@ -46,7 +46,6 @@ body, html {
     height: 400px;
     
     
-    
 }
 
 .background-rotate-bild {
@@ -68,7 +67,7 @@ body, html {
 
 .content1 {
     position: absolute;
-    top: -170px;
+    top: -240px;
     left: -400px;
     width: 100%;
     height: 100%;
@@ -91,7 +90,7 @@ body, html {
 
 .content2 {
     position: absolute;
-    top: 170px;
+    top: 240px;
     left: 400PX;
     width: 100%;
     height: 100%;
@@ -362,7 +361,7 @@ body, html {
 }
 .content-new2 {
     position: absolute;
-    top: 280px;
+    top: 300px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -571,19 +570,19 @@ body, html {
         animation: flash 4s infinite alternate; /* Blinkende Animation */
     }
     .content1 {
-        top: -90%; /* Vertikale Position anpassen */
+        top: -85%; /* Vertikale Position anpassen */
         left: 0%; /* Horizontale Position anpassen */
         transform: translateX(-50%); /* Zentrieren des Elements horizontal */
     }
 
     .content2 {
-        top: 90%; /* Vertikale Position anpassen */
+        top: 85%; /* Vertikale Position anpassen */
         left: 0%; /* Horizontale Position anpassen */
         transform: translateX(-50%); /* Zentrieren des Elements horizontal */
     }
 
     .content-new1 {
-        top: -35%; /* Vertikale Position anpassen */
+        top: -40%; /* Vertikale Position anpassen */
         scale: 0.18;
     }
     
@@ -597,18 +596,18 @@ body, html {
         top: -40%; /* Vertikale Position anpassen */
         left: 2%; /* Horizontale Position anpassen */
         transform: translateX(-50%); /* Zentrieren des Elements horizontal */
-        scale: 0.1;
+        scale: 0.11;
     }
 
     .content4 {
         top: -30%; /* Vertikale Position anpassen */
         left: 2%; /* Horizontale Position anpassen */
         transform: translateX(-50%); /* Zentrieren des Elements horizontal */
-        scale: 0.08;
+        scale: 0.09;
     }
 
     .content5 {
-        top: 48%; /* Vertikale Position anpassen */
+        top: 47%; /* Vertikale Position anpassen */
         left: 2%; /* Horizontale Position anpassen */
         transform: translateX(-50%); /* Zentrieren des Elements horizontal */
         scale: 0.06;
@@ -621,7 +620,11 @@ body, html {
         visibility: hidden;
     }
     
-    
+    .content-new5 {
+        top: 35%; /* Vertikale Position anpassen */
+        transform: translateY(-50%); /* Zentrieren des Elements vertikal */
+        scale: 0.2;
+    }
    
     
 }

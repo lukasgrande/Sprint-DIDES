@@ -612,7 +612,7 @@ body, html {
     }
     
     .content-new2 {
-        top: 33%; /* Vertikale Position anpassen */
+        top: 30%; /* Vertikale Position anpassen */
         transform: translateY(-50%); /* Zentrieren des Elements vertikal */
         scale: 0.2;
     }
@@ -632,7 +632,7 @@ body, html {
     }
 
     .content5 {
-        top: 43%; /* Vertikale Position anpassen */
+        top: 40%; /* Vertikale Position anpassen */
         left: 2%; /* Horizontale Position anpassen */
         transform: translateX(-50%); /* Zentrieren des Elements horizontal */
         scale: 0.06;

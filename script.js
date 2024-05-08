@@ -52,7 +52,8 @@ document.getElementById("clickArea").addEventListener("click", function() {
                 },1500); // Start der Fade-In-Animation von ContentNew3-4 nach 1.5 Sekunden
 
                 setTimeout(() => {
-                    contentNew5.style.animation = "fadeIn 3s forwards";
+                    contentNew5.style.animation = "fadeInHerz 4.5s forwards";
+                    contentNew5.style.display = "block"
                 },1500); // Start der Fade-In-Animation von ContentNew3-4 nach 1.5 Sekunden
                 
                 // Timeout hinzufügen, um die neuen Content-Divs für 5 Sekunden sichtbar zu lassen

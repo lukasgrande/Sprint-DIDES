@@ -399,7 +399,7 @@ body, html {
 }
 
 .content-new5 {
-    content: hidden;
+    visibility: hidden;
     
   
 }
@@ -499,6 +499,30 @@ body, html {
     }
 }
 
+/* Keyframes für die Einblendanimation der Content-Elemente */
+@keyframes fadeInHerz {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    25% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    75% {
+        opacity: 1;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+}
+
 
 /* Media Queries für iPhone */
 @media only screen and (max-device-width: 414px) {
@@ -569,6 +593,7 @@ body, html {
         opacity: 0; /* Startet unsichtbar */
         animation: flash 4s infinite alternate; /* Blinkende Animation */
     }
+    
     .content1 {
         top: -85%; /* Vertikale Position anpassen */
         left: 0%; /* Horizontale Position anpassen */
@@ -613,20 +638,20 @@ body, html {
         scale: 0.06;
     }
 
-    .content-new3 {
-        visibility: hidden;
-    }
+    .content-new3,
     .content-new4 {
-        visibility: hidden;
+        visibility: hidden; /* Verstecke .content-new3 und .content-new4 auf dem mobilen Bildschirm */
     }
-    
+
     .content-new5 {
-        top: 35%; /* Vertikale Position anpassen */
+        top: 5%; /* Vertikale Position anpassen */
         transform: translateY(-50%); /* Zentrieren des Elements vertikal */
         scale: 0.2;
-    }
-   
+        visibility: visible
     
+       
+    }
 }
+
     
 

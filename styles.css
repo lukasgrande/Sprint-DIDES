@@ -1,0 +1,637 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+@font-face {
+    font-family: "CODE";
+    src: url("FiraCode-Medium.ttf");
+    font-family: "MyCustomFont";
+    src: url("RetroCoolRegular-rgV2O.ttf");
+    
+  }
+
+  body {
+    font-family: "MyCustomFont", sans-serif;
+  }
+
+  @keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.landing-page {
+    position: relative; /* Positionierung relativ für das absolute Positionieren der click-area */
+    background-color: white; /* Schwarzer Hintergrund */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Verhindert, dass das drehende Bild über den Rand hinausragt */
+   
+}
+
+.background-rotate {
+    position: relative; /* Ändere Position auf relativ */
+    width: 400px;
+    height: 400px;
+    
+    
+}
+
+.background-rotate-bild {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('realitaet2040.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    animation: rotateAnimation 50s linear infinite;
+    z-index: 1;
+    
+}
+
+
+
+.content1 {
+    position: absolute;
+    top: -240px;
+    left: -400px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    z-index: 2;
+    text-align: center;
+    
+
+}
+
+.content1 h1{
+    font-size: 1.5em;
+    font-family: "CODE", sans-serif;
+    opacity: 1;
+    font-style: italic;
+}
+
+.content2 {
+    position: absolute;
+    top: 240px;
+    left: 400PX;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    z-index: 2;
+    text-align: center;
+
+}
+
+.content2 h1{
+    font-size: 1.5em;
+    font-family: "CODE", sans-serif;
+}
+
+
+.content3 {
+    position: absolute;
+    top: -320px;
+    left: 40px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 2;
+    text-align: center;
+    scale: 0.2;
+    opacity: 0.5;
+}
+
+.content3 h1{
+    font-size: 8em;
+    font-family: "MyCustomFont", sans-serif;
+    opacity: 0.5;
+}
+
+.content4 {
+    position: absolute;
+    top: -210px;
+    left: 40px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 2;
+    text-align: center;
+    scale: 0.15;
+}
+
+.content4 h1{
+    font-size: 4em;
+    font-family: "MyCustomFont", sans-serif;
+    opacity: 1;
+}
+
+.content5 {
+    position: absolute;
+    top: 380px;
+    left: 40px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 2;
+    text-align: center;
+    scale: 0.1;
+}
+
+.content5 h1{
+    font-size: 2em;
+    font-family: "MyCustomFont", sans-serif;
+    opacity: 1;
+}
+.content6 {
+    position: absolute;
+    top: 300px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 2;
+    text-align: center;
+}
+
+.content6 h1{
+    font-style: italic;
+    font-size: 2em;
+    font-family: "MyCustomFont", sans-serif;
+}
+
+/* Füge dem Klickbereich einige Stile hinzu */
+.click-area {
+    position: absolute;
+    top: center;
+    width: 50%;
+    height: 50%;
+    cursor: pointer;
+    z-index: 4; /* Stelle sicher, dass der Klickbereich über anderen Inhalten liegt */
+}
+
+/* Stile für ausgeblendete Elemente */
+.hide {
+    display: none;
+}
+
+/* Stile für sichtbare Elemente */
+.show {
+    display: block;
+}
+
+
+/* Keyframes für den Einsaugeffekt */
+@keyframes suctionEffect {
+    0% {
+        transform: scale(4); /* Startgröße: normal */
+        border-radius: 50%; /* Startform: Kreis */
+        opacity: 1; /* Startopazität: vollständig sichtbar */
+    }
+    50% {
+        transform: scale(4); /* Startgröße: normal */
+        border-radius: 50%; /* Startform: Kreis */
+        opacity: 1; /* Startopazität: vollständig sichtbar */
+    }
+    100% {
+        transform: scale(0); /* Endgröße: vollständig eingesaugt */
+        border-radius: 50%; /* Beibehaltung der Kreisform */
+        opacity: 0; /* Endopazität: unsichtbar */
+    }
+}
+
+/* Overlay-Stile für den Einsaugeffekt */
+.suction-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    animation: suctionEffect 1s ease-out forwards; /* Verwende den Einsaugeffekt */
+    z-index: 4; /* Stelle sicher, dass das Overlay über allem anderen liegt */
+}
+
+
+.custom-gif {
+    position: absolute; /* Absolutes Positionieren innerhalb des relativen Containers */
+    top: 50%; /* Zentrieren des GIFs vertikal */
+    left: 50%; /* Zentrieren des GIFs horizontal */
+    transform: translate(-50%, -50%); /* Zentrieren des GIFs genau in der Mitte */
+    width:100%; /* Skaliere das GIF auf 80% der Breite des Containers */
+    height: 100%; /* Skaliere die Höhe entsprechend, um das Seitenverhältnis beizubehalten */
+    opacity: 1;
+
+}
+/* Animation für content1 von links */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation für content2 von rechts */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Animation für content1 von links */
+@keyframes fadeOutLeft {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+/* Animation für content2 von rechts */
+@keyframes fadeOutRight {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+.content1 {
+    animation: fadeInLeft 3s ease-in-out forwards;
+    
+}
+
+.content2 {
+    animation: fadeInRight 3s ease-in-out forwards;
+    
+}
+
+
+/* Keyframes für die Einblendanimation der Content-Elemente */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes für die Einblendanimation der Content-Elemente */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20);
+    }
+}
+
+/* Animation für Content 3-6 pausieren */
+.content3, .content4, .content5, .content6 {
+    opacity: 0; /* Elemente zunächst ausblenden */
+
+}
+
+.content-new1 {
+    position: absolute;
+    top: -310px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+    z-index: 2;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    scale: 0.3;
+}
+.content-new2 {
+    position: absolute;
+    top: 300px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    z-index: 2;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    scale: 0.3;
+}
+
+.content-new3 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    
+    
+
+}
+.content-new4 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.content-new5 {
+    position: absolute;
+    top: 300px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    z-index: 2;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Keyframes für die Einblendanimation der Content-Elemente */
+@keyframes fadeRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    40% {
+        opacity: 1;
+        transform: translateX(60px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* Keyframes für die Einblendanimation der Content-Elemente */
+@keyframes fadeLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    40% {
+        opacity: 1;
+        transform: translateX(-60px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(-60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.horizontal-line {
+    position: fixed;
+    top: 50%; /* Zentrieren der Linien vertikal */
+    width: 38%; /* Vollständige Breite des Bildschirms */
+    height: 2px; /* Höhe der Linie */
+    background-color: black; /* Farbe der Linie */
+    z-index: 3; /* Stelle sicher, dass die Linien über anderen Inhalten liegen */
+    opacity: 0; /* Startet unsichtbar */
+    animation: flash 4s infinite alternate; /* Blinkende Animation */
+}
+
+/* Linie am linken Rand */
+.horizontal-line.left {
+    left: 0; /* Position am linken Rand */
+}
+
+/* Linie am rechten Rand */
+.horizontal-line.right {
+    right: 0; /* Position am rechten Rand */
+}
+
+.vertical-line {
+    position: fixed;
+    left: 50%; /* Zentrieren der Linien horizontal */
+    height: 29vh; /* Vollständige Höhe des Bildschirms */
+    width: 2px; /* Breite der Linie */
+    background-color: black; /* Farbe der Linie */
+    z-index: 3; /* Stelle sicher, dass die Linien über anderen Inhalten liegen */
+    opacity: 0; /* Startet unsichtbar */
+    animation: flash 4s infinite alternate; /* Blinkende Animation */
+}
+
+/* Linie am oberen Rand */
+.vertical-line.top {
+    top: 0; /* Position am oberen Rand */
+}
+
+/* Linie am unteren Rand */
+.vertical-line.bottom {
+    bottom: 0; /* Position am unteren Rand */
+}
+
+/* Animation für das Blitzen der Linien */
+@keyframes flash {
+    0% {
+        opacity: 0; /* Startet unsichtbar */
+    }
+    50% {
+        opacity: 1; /* Wird sichtbar */
+    }
+    100% {
+        opacity: 0; /* Wird unsichtbar */
+    }
+}
+
+
+/* Media Queries für iPhone */
+@media only screen and (max-device-width: 414px) {
+    /* Gemeinsame Stile für iPhone-Screens */
+    .landing-page {
+        height: auto;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    .background-rotate {
+        width: 80%;
+        height: 80%;
+    }
+
+    .content-element {
+        position: relative;
+    }
+
+    .horizontal-line, .vertical-line {
+        display: none;
+    }
+    
+}
+
+/* Media Queries für iPhone */
+@media only screen and (max-device-width: 390px) {
+    /* Gemeinsame Stile für iPhone-Screens */
+    .landing-page {
+        height: auto;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    .background-rotate {
+        position: relative; /* Ändere Position auf relativ */
+        width: 300px; /* Reduziere die Breite des rotierenden Hintergrunds */
+        height: 300px; /* Reduziere die Höhe des rotierenden Hintergrunds */
+    }
+
+    .content-element {
+        position: relative;
+    }
+
+    .horizontal-line {
+        position: fixed;
+        top: 50%; /* Zentrieren der Linien vertikal */
+        left: 50%; /* Zentrieren der Linien horizontal */
+        transform: translate(-50%, -50%); /* Zentrieren des Linienpunkts */
+        width: 90%; /* Breite der horizontalen Linien */
+        height: 2px; /* Höhe der Linie */
+        background-color: black; /* Farbe der Linie */
+        z-index: 3; /* Stelle sicher, dass die Linien über anderen Inhalten liegen */
+        opacity: 0; /* Startet unsichtbar */
+        animation: flash 4s infinite alternate; /* Blinkende Animation */
+    }
+    
+    .vertical-line {
+        position: fixed;
+        top: 50%; /* Zentrieren der Linien vertikal */
+        left: 50%; /* Zentrieren der Linien horizontal */
+        transform: translate(-50%, -50%); /* Zentrieren des Linienpunkts */
+        height: 80%; /* Höhe der vertikalen Linien */
+        width: 2px; /* Breite der Linie */
+        background-color: black; /* Farbe der Linie */
+        z-index: 3; /* Stelle sicher, dass die Linien über anderen Inhalten liegen */
+        opacity: 0; /* Startet unsichtbar */
+        animation: flash 4s infinite alternate; /* Blinkende Animation */
+    }
+    .content1 {
+        top: -100%; /* Vertikale Position anpassen */
+        left: 0%; /* Horizontale Position anpassen */
+        transform: translateX(-50%); /* Zentrieren des Elements horizontal */
+    }
+
+    .content2 {
+        top: 100%; /* Vertikale Position anpassen */
+        left: 0%; /* Horizontale Position anpassen */
+        transform: translateX(-50%); /* Zentrieren des Elements horizontal */
+    }
+
+    .content-new1 {
+        top: -40%; /* Vertikale Position anpassen */
+        scale: 0.18;
+    }
+    
+    .content-new2 {
+        top: 40%; /* Vertikale Position anpassen */
+        transform: translateY(-50%); /* Zentrieren des Elements vertikal */
+        scale: 0.2;
+    }
+    
+    .content3 {
+        top: -40%; /* Vertikale Position anpassen */
+        left: 2%; /* Horizontale Position anpassen */
+        transform: translateX(-50%); /* Zentrieren des Elements horizontal */
+        scale: 0.1;
+    }
+
+    .content4 {
+        top: -30%; /* Vertikale Position anpassen */
+        left: 2%; /* Horizontale Position anpassen */
+        transform: translateX(-50%); /* Zentrieren des Elements horizontal */
+        scale: 0.08;
+    }
+
+    .content5 {
+        top: 48%; /* Vertikale Position anpassen */
+        left: 2%; /* Horizontale Position anpassen */
+        transform: translateX(-50%); /* Zentrieren des Elements horizontal */
+        scale: 0.06;
+    }
+
+    .content-new3 {
+        visibility: hidden;
+    }
+    .content-new4 {
+        visibility: hidden;
+    }
+    
+   
+    
+}
+    
+

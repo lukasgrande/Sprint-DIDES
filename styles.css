@@ -384,9 +384,7 @@ body, html {
     display: flex;
     justify-content: center;
     z-index: 1;
-    
-    
-
+   
 }
 .content-new4 {
     position: absolute;
@@ -402,7 +400,6 @@ body, html {
 .content-new5 {
     content: hidden;
     
-   
   
 }
 

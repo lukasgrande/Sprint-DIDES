@@ -66,7 +66,7 @@ body, html {
 
 .content1 {
     position: absolute;
-    top: -240px;
+    top: -220px;
     left: -400px;
     width: 100%;
     height: 100%;
@@ -89,7 +89,7 @@ body, html {
 
 .content2 {
     position: absolute;
-    top: 240px;
+    top: 220px;
     left: 400PX;
     width: 100%;
     height: 100%;

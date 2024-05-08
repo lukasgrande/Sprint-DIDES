@@ -612,7 +612,7 @@ body, html {
     }
     
     .content-new2 {
-        top: 32%; /* Vertikale Position anpassen */
+        top: 30%; /* Vertikale Position anpassen */
         transform: translateY(-50%); /* Zentrieren des Elements vertikal */
         scale: 0.2;
     }
